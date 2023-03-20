@@ -10,11 +10,12 @@ function Form(){
    const [saveBtn, setSavebtn] = useState(false)
    const [uploadSuccessMessage, setUploadSuccessMessage] = useState('')
    const [audioTitle, setAudioTitle] = useState('')
+   const [audioEmail, setAudioEmail] = useState('')
 
    const client = filestack.init('AR9IpPZYtQqujze7lQqt7z');
    const options = {
         fromSources: ["local_file_system","url"],
-        accept: ["video/*", "audio/*", "image/*"],
+        accept: ["video/*", "audio/*"],
         onFileSelected: file => {
             if (file.size > 1000 * 1000 * 10) {
                 throw new Error('File too big, select something smaller than 10MB');
@@ -70,6 +71,7 @@ function Form(){
         setName('')
         setAudioURL('')
         setAudioTitle('')
+        setAudioEmail('')
         if(error){
             setError(null)
         }
@@ -91,10 +93,47 @@ function Form(){
         setAudioTitle(e.target.value)
     }
 
+    function handleAudioEmail(e){
+        setAudioEmail(e.target.value)
+    }
+
     const uploadBtnColor = audioURL !== ""? "btn btn-success": "btn btn-primary"
 
     return (
-    <div className="p-5" >
+    <div>
+                <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div class="container-fluid text-white">
+            <a class="navbar-brand text-white" href="#"><em>tcript AI</em></a>
+            <button class="navbar-toggler btn btn-light bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse text-white" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-white" href="#">Pricing</a>
+                </li>
+            </ul>
+            <span class="navbar-text text-white">
+                text that speech quick
+            </span>
+            </div>
+        </div>
+        </nav>
+        <div>
+            {/* <h4 className="bg-black text-white">tcript AI Bot</h4> */}
+            <p >
+                <b>Speech-to-Text Transcription Bot</b><br/>
+                Accepted formats: MP3, MP4a, WAV
+            </p>
+        </div>
+    <div class="position-relative mx-auto" style={{"width": "60%"}}> 
+    <div className="p-5">
        <form className="row gy-2 gx-3 align-items-center" onSubmit={handleSubmit}>
             <div className="col-auto">
                 <label className="visually-hidden" htmlFor="autoSizingInput" >Name</label>
@@ -104,12 +143,12 @@ function Form(){
                 <label className="visually-hidden" htmlFor="autoSizingInputGroup">Email</label>
                 <div className="input-group">
                 <div className="input-group-text">@</div>
-                <input type="text" className="htmlForm-control" id="autoSizingInputGroup" placeholder="email"/>
+                <input type="text" className="htmlForm-control" id="autoSizingInputGroup" placeholder="email" onChange={handleAudioEmail} value={audioEmail} required/>
                 </div>
             </div>
             <div className="col-auto">
                 <label className="visually-hidden" htmlFor="autoSizingInput" >Title</label>
-                <input type="text" onChange={handleAudioTitle} className="htmlForm-control" id="autoSizingInput" placeholder="Audio Title"required/>
+                <input type="text" onChange={handleAudioTitle} className="htmlForm-control" id="autoSizingInput" placeholder="Audio Title" value={audioTitle} required/>
             </div>
             <div className="col-auto">
                 <label className="visually-hidden" htmlFor="autoSizingSelect">Audio type</label>
@@ -131,9 +170,16 @@ function Form(){
         <div>
         <p>{uploadSuccessMessage}</p>
         </div>
-        <div className="col-auto, p-2">
-            <p>{error?<b style={{'color':'red'}}>Error Occurred! Please provide a valid link</b>:transcript === '' && buttonClick === true?<b>loading...</b>: transcript['transcript']}</p>
-        </div>
+        {
+            transcript !== ''?
+            <div className="col-auto border border-dark" style={{'padding':'20px'}}>
+                <p>{error?<b style={{'color':'red'}}>Error Occurred! Please provide a valid link</b>:transcript === '' && buttonClick === true?<b>loading...</b>: transcript['transcript']}</p>
+            </div>: transcript
+        }
+        {
+            transcript === '' && buttonClick === true?<b>loading...</b>: ''
+        }
+        <br/>
         <div className="col-auto">
             {
                 transcript !== '' || error ?<div>
@@ -148,6 +194,8 @@ function Form(){
                 </div>
             }
         </div>
+    </div>
+    </div>
     </div>
 )}
 
