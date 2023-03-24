@@ -26,7 +26,7 @@ This is the frontend development repository.
 - Open terminal and run `npm install` to install the required packages
 - Run `npm start` to start the server
 - If successful, your deault browser will open a new tab with the UI running on `http://localhost:3000`
-- Walaah!! You can now upload your audio and experience the transcription magic!
+- Walaah!! You can now upload your audio and experience the transcription magic!!
 
 ### **Live link**
 
