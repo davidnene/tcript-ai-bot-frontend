@@ -42,7 +42,6 @@ function Form(){
 
     function handleSubmit(e){
         e.preventDefault()
-        console.log(data)
         setButtonclick(!buttonClick)
         setUploadSuccessMessage('')
         fetch(URL, {
@@ -60,7 +59,6 @@ function Form(){
         .catch((error) => {
             setError(error)
             setButtonclick(!buttonClick)
-            console.log(error)
         })
         
     }
