@@ -133,7 +133,7 @@ function Form(){
                 Maximum size: 10mbs
             </p>
         </div>
-    <div className="position-relative mx-auto" style={{"width": "60%"}}> 
+    <div className="position-relative mx-auto" style={{"width": "90%"}}> 
     <div className="p-5">
        <form className="row gy-2 gx-3 align-items-center" onSubmit={handleSubmit}>
             <div className="col-auto">
