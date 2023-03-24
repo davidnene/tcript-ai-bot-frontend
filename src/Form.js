@@ -159,7 +159,7 @@ function Form(){
                 </select>
             </div>
             <div className="col-auto">
-                <button onClick={handleFileUpload} className={uploadBtnColor}>{audioURL !== ""?"Uploaded": "Upload audio"}</button>
+                <button onClick={handleFileUpload} type="submit" className={uploadBtnColor}>{audioURL !== ""?"Uploaded": "Upload audio"}</button>
             </div>
             {
             audioURL?<div className="col-auto">
