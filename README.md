@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+## **tcript AI Bot - Frontend**
+tcript is a speech to text bot that uses WhisperAPI for transcription.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend development repository.
 
-## Available Scripts
+### **Technologies**
+- ReactJS
+- Bootstrap
+- Filestack
 
-In the project directory, you can run:
+### **Architecture**
+- A user adds their details and uploads an audio 10mb max
+- Once the user clicks on transcribe;
+  - The video is  uploaded to filestack via API
+  - FIlestack API returns a response which includes the video link
+  - The video link is sent to [backend/tcript API]('https://github.com/davidnene/tcript-ai-bot-backend.git') as a `POST` request
+  - The tcript API returns the transcript as a response in json format
+  - The transcript is then dispayed to the user
+- The user can choose to save(coming soon!) or clear output and upload another audio
 
-### `npm start`
+### **How to run client/UI on localhost**
+- Ensure you have node package manager installed in your pc (npm)
+- Clone this repository `git clone https://github.com/davidnene/tcript-ai-bot-frontend.git`
+- Navigate into the directory via terminal `cd tcript-ai-bot-frontend` for linux/unix users
+- Run `code .` to open your default IDE
+- Open terminal and run `npm install` to install the required packages
+- Run `npm start` to start the server
+- If successful, your deault browser will open a new tab with the UI running on `http://localhost:3000`
+- Walaah!! You can now upload your audio and experience the transcription magic!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Live link**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Date released**
+24-March-2023
 
-### `npm test`
+### **Author**
+David Nene - Fullstack | AI Engineer
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
