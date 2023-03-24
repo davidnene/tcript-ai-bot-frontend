@@ -101,25 +101,25 @@ function Form(){
 
     return (
     <div>
-                <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
-        <div class="container-fluid text-white">
-            <a class="navbar-brand text-white" href="#"><em>tcript AI</em></a>
-            <button class="navbar-toggler btn btn-light bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "></span>
+                <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+        <div className="container-fluid text-white">
+            <a className="navbar-brand text-white" href="/"><em>tcript AI</em></a>
+            <button className="navbar-toggler btn btn-light bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon "></span>
             </button>
-            <div class="collapse navbar-collapse text-white" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item ">
-                <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            <div className="collapse navbar-collapse text-white" id="navbarText">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                <li className="nav-item ">
+                <a className="nav-link active text-white" aria-current="page" href="/">Home</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link text-white" href="#">Features</a>
+                <li className="nav-item">
+                <a className="nav-link text-white" href="/">Features</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link text-white" href="#">Pricing</a>
+                <li className="nav-item">
+                <a className="nav-link text-white" href="/">Pricing</a>
                 </li>
             </ul>
-            <span class="navbar-text text-white">
+            <span className="navbar-text text-white">
                 text that speech quick
             </span>
             </div>
@@ -132,7 +132,7 @@ function Form(){
                 Accepted formats: MP3, MP4a, WAV
             </p>
         </div>
-    <div class="position-relative mx-auto" style={{"width": "60%"}}> 
+    <div className="position-relative mx-auto" style={{"width": "60%"}}> 
     <div className="p-5">
        <form className="row gy-2 gx-3 align-items-center" onSubmit={handleSubmit}>
             <div className="col-auto">
