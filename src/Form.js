@@ -33,7 +33,7 @@ function Form(){
         audioURL
     }
    
-    const URL = "http://127.0.0.1:5000/transcripts"
+    const URL = "https://tcript-api.onrender.com/transcripts"
     
 
     function handleName(e){
@@ -120,7 +120,7 @@ function Form(){
                 </li>
             </ul>
             <span className="navbar-text text-white">
-                text that speech quick
+                speech to text like magic!
             </span>
             </div>
         </div>
@@ -129,7 +129,8 @@ function Form(){
             {/* <h4 className="bg-black text-white">tcript AI Bot</h4> */}
             <p >
                 <b>Speech-to-Text Transcription Bot</b><br/>
-                Accepted formats: MP3, MP4a, WAV
+                Accepted formats: MP3, MP4a, WAV<br/>
+                Maximum size: 10mbs
             </p>
         </div>
     <div className="position-relative mx-auto" style={{"width": "60%"}}> 
