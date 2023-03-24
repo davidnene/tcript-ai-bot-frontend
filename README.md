@@ -28,6 +28,9 @@ This is the frontend development repository.
 - If successful, your deault browser will open a new tab with the UI running on `http://localhost:3000`
 - Walaah!! You can now upload your audio and experience the transcription magic!!
 
+### **Client/UI configuration**
+- If you'd be interested in running the UI on local host too, check the repo [here]('https://github.com/davidnene/tcript-ai-bot-frontend.git')
+
 ### **Live link**
 
 ### **Date released**
