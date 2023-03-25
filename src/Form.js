@@ -150,7 +150,7 @@ function Form(){
                 <input type="text" onChange={handleAudioTitle} className="htmlForm-control" id="autoSizingInput" placeholder="Topic/Title" value={audioTitle} required/>
             </div>
             <div className="col-auto">
-                <label className="visually-hidden" htmlFor="autoSizingSelect">Audio type</label>
+                <label htmlFor="autoSizingSelect">Audio type</label><br/>
                 <select className="htmlForm-select" id="autoSizingSelect" defaultValue="0">
                 <option value="0">Music</option>
                 <option value="1">Podcast</option>
