@@ -147,7 +147,7 @@ function Form(){
             </div>
             <div className="col-auto">
                 <label className="visually-hidden" htmlFor="autoSizingInput" >Title</label>
-                <input type="text" onChange={handleAudioTitle} className="htmlForm-control" id="autoSizingInput" placeholder="Audio Title" value={audioTitle} required/>
+                <input type="text" onChange={handleAudioTitle} className="htmlForm-control" id="autoSizingInput" placeholder="Topic/Title" value={audioTitle} required/>
             </div>
             <div className="col-auto">
                 <label className="visually-hidden" htmlFor="autoSizingSelect">Audio type</label>
