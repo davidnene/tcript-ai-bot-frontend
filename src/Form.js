@@ -15,7 +15,7 @@ function Form(){
    const client = filestack.init('AR9IpPZYtQqujze7lQqt7z');
    const options = {
         fromSources: ["local_file_system","url"],
-        accept: ["audio/*"],
+        accept: ["video/*","audio/*"],
         onFileSelected: file => {
             if (file.size > 1000 * 1000 * 10) {
                 throw new Error('File too big, select something smaller than 10MB');
