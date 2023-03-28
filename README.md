@@ -28,10 +28,10 @@ This is the frontend development repository.
 - If successful, your deault browser will open a new tab with the UI running on `http://localhost:3000`
 - Walaah!! You can now upload your audio and experience the transcription magic!!
 
-### **Client/UI configuration**
-- If you'd be interested in running the UI on local host too, check the repo [here]('https://github.com/davidnene/tcript-ai-bot-frontend.git')
-
+### **Back-end/API configuration**
+If you'd be interested in running the Backend/API on local host too, check the repo [Here]('https://github.com/davidnene/tcript-ai-bot-backend.git')
 ### **Live link**
+https://tcript.netlify.app/ 
 
 ### **Date released**
 24-March-2023
